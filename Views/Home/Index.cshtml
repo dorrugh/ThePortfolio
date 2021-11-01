@@ -1,0 +1,175 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <title>Walter Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">   @*used for the sizing of the webpage in different browsers.*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="~/CSS/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="~/Images/logo (1).png" alt="Walter's Logo'" />
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#services" class="nav__link">Area's of Expertise</a></li>
+                <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    @*//Intoduction*@
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            Hey! I'm <strong> Walter Thomas!</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">Software Developer</p>
+        <img src="~/Images/output-onlinepngtools.png" alt="A picture of Walter" class="intro__img" />
+    </section>
+
+    @*Areas of Expertise*@
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">My Areas Of Expertise</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Front End</h3>
+                <p>
+                    With a combination of HTML, Bootstrap, JavaScript, CSS, and Razor pages. I can make dynamic, responsive, and
+                    user friendly front end webpages for web applications.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Back End</h3>
+                <p>
+                    Using C# along with ASP.Net and MVC, I am able to write effective code that successfully
+                    create responsive and efficient backend code
+                    that
+                    connects to the frontend and realtional databases such as SQL to help bring users a smooth web application experience.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Databases</h3>
+                <p>
+                    Being well versed in SQL Development I am able to design database implementations, structure proper
+                    model relationships and use effective queries for retrieving data. Database development is crucial
+                    to any application.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <h3>Cloud</h3>
+            <p>
+                Strong understanding of cloud concepts, cloud architecture, Azure services, Azure workloads, security
+                and privacy which helps me to create cloud native applications that scale with ease.
+            </p>
+        </div>
+
+        <a href="/Docs/Resume(Walter).pdf" download class="btn">Download My Resume</a>
+    </section>
+
+    @* About Me *@
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">Who Is Walter?</h2>
+        <p class="section__subtitle section__subtitle--about">Your Friendly Neighborhood Developer</p>
+
+        <div class="about-me__body">
+            <p>
+                An inventive and purposeful United States Marine Corps (USMC) veteran and software engineer with the capacity to
+                utilize efficient practices and process improvement skills to meet organization goals. Possesses training and
+                experience in the development, integrating, testing, and maintenance of various applications in multiple
+                technologies. Ability to build and maintain strong relationships while partnering cross-functionally across
+                departments. Possesses natural project management and leadership acumen and a positive history of assisting team
+                members in exceeding expectations. A cooperative collaborator and individual contributor who works well with
+                diverse groups while adapting to demanding environments & maintains effective communication skills. Seeking to
+                leverage expertise and passion to obtain a position with unlimited growth potential.
+            </p>
+            <p>
+                All my life I was always curious about technology and how often it changes/progresses, I knew I loved learning and I knew I wanted to help as many people
+                as possible. As a developer, I now feel that goal is very much in reach. My passion for creating
+                applications is fueled by the endless possibilities of where this road could take me. I look forward to every challenge that software development throws my way.
+            </p>
+
+        </div>
+
+        <img src="~/Images/IMG-2006.jpg" alt="Walter At The Beach" class="about-me__img" />
+
+    </section>
+
+    @*Projects*@
+<section class="my-work" id="work">
+    <h2 class="section__title section__title--work">My Work</h2>
+    @*<p class="section__subtitle section__subtitle--work">See My Work</p>*@
+
+    @* Progress indictaor shows what slide the picture is on *@
+    <div class="container" style="padding-top:3px">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                @*<li data-target="#myCarousel" data-slide-to="2"></li>*@
+            </ol>
+
+            @* Contents of the carousel *@
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="~/Images/i01_The Hub.jpg" alt="Project Screenshot">
+                    <div class="carousel-caption">
+                        <h3>The Hub</h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="~/Images/i01_ThePCADDash.jpg" alt="Project Screenshot">
+                    <div class="carousel-caption">
+                        <h3>The PCADDash</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            @* left and right control for the carousel *@
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <a asp-action="Index" asp-controller="Projects" class="btn">Take a Look At My Projects!</a>
+
+</section>
+
+    @*Footer*@
+    <footer class="footer">
+        <a href="mailto:walter.l.thomas@outlook.com" class="footer__link">Walter.L.Thomas@outlook.com</a>
+        <ul class="social-list">
+            <li class="social-list__item"><a class="social-list__link" href="https://www.linkedin.com/in/walterlthomas" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="https://github.com/dorrugh" target="_blank"><i class="fab fa-github-square"></i></a></li>
+        </ul>
+    </footer>
+
+    <script src="~/JS/Index.js"></script>
+</body>
+</html>

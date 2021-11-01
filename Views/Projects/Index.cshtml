@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ThePortfolio.Models.Project>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h3 class="text-center text-uppercase">Projects</h3>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary rounded-0"><i class="fa fa-plus-circle"></i> Add New</a>
+</p>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TechnologiesUsed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectPicture)
+            </th>
+            <th>Action(s)</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TechnologiesUsed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">
+                    <img src="@FileLocation.RetriveFileFromFolder@item.ProjectPicture" class="img-thumbnail" height="1000" width="1000" asp-append-version="true" />
+                </a>
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-info rounded-0"><i class="fa fa-pencil-alt"></i>Edit</a>
+                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger rounded-0"><i class="fa fa-trash-alt"></i>Delete</a>
+                @*<img src="@FileLocation.RetriveFileFromFolder@item.ProjectPicture" class="img-thumbnail" height="100" width="100" asp-append-version="true" />*@
+
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
