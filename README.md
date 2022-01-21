@@ -1,6 +1,6 @@
 # ThePortfolio
 
-ThePortfolio is an interactive portfolio website to showcase the products I create through software development, what I stand for, and what I hope to accomplish with Software Development. The project is still ongoing, I plan to deploy the website by mid-December 2021. 
+ThePortfolio is an interactive portfolio website to showcase the products I create through software development, what I stand for, and what I hope to accomplish with Software Development. The project is still ongoing, I plan to deploy the website by mid-Febuary 2022. 
 
 # Why A Porftfolio Website?
 * Showcases my front-end skills.
